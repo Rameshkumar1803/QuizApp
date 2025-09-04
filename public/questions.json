@@ -1,0 +1,80 @@
+[
+  {
+    "id": "lq1",
+    "category": "Science: Computers",
+    "difficulty": "easy",
+    "question": "What does CPU stand for?",
+    "options": [
+      "Central Processing Unit",
+      "Computer Personal Unit",
+      "Central Process Utility",
+      "Compute Performance Unit"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "lq2",
+    "category": "General Knowledge",
+    "difficulty": "medium",
+    "question": "Which company developed the video game franchise 'The Legend of Zelda'?",
+    "options": [
+      "Sega",
+      "Nintendo",
+      "Capcom",
+      "Square Enix"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "lq3",
+    "category": "Geography",
+    "difficulty": "easy",
+    "question": "What is the capital of Australia?",
+    "options": [
+      "Sydney",
+      "Canberra",
+      "Melbourne",
+      "Perth"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "lq4",
+    "category": "Science",
+    "difficulty": "medium",
+    "question": "What is the chemical symbol for Gold?",
+    "options": [
+      "Ag",
+      "Au",
+      "Gd",
+      "Go"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "lq5",
+    "category": "History",
+    "difficulty": "medium",
+    "question": "In which year did World War II end?",
+    "options": [
+      "1942",
+      "1944",
+      "1945",
+      "1948"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "lq6",
+    "category": "Entertainment: Film",
+    "difficulty": "easy",
+    "question": "Who directed the movie 'Inception'?",
+    "options": [
+      "Steven Spielberg",
+      "Christopher Nolan",
+      "James Cameron",
+      "Ridley Scott"
+    ],
+    "correctIndex": 1
+  }
+]

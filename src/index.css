@@ -1,0 +1,101 @@
+:root {
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #111827;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --radius: 12px;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+* { box-sizing: border-box; }
+html,body,#root { height: 100%; margin: 0; background: var(--bg); color: #0f172a; }
+.container { max-width: 900px; margin: 0 auto; padding: 16px; }
+
+.app-header { background: rgba(255,255,255,0.95); border-bottom: 1px solid #e6e9ee; position: sticky; top: 0; z-index: 20; }
+.header-inner { display:flex; align-items:center; justify-content:space-between; padding: 12px 16px; }
+.brand { font-weight:700; font-size:1.125rem; color: var(--accent); text-decoration:none; }
+.nav-link { margin-left:12px; color:var(--muted); text-decoration:none; font-size:0.95rem; }
+
+.main { padding-top: 28px; padding-bottom: 40px; min-height: calc(100vh - 160px); }
+
+.card { background: var(--card); border-radius: var(--radius); padding: 18px; box-shadow: 0 6px 18px rgba(15,23,42,0.06); border: 1px solid #eef2f7; }
+
+.grid-2 { display:grid; grid-template-columns: 1fr; gap: 16px; }
+@media(min-width:800px){ .grid-2 { grid-template-columns: 1fr 1fr; } }
+
+.btn { 
+  padding: 10px 14px; 
+  border-radius: 10px; 
+  border: none; 
+  cursor: pointer; 
+  font-weight:600;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+.btn:active { transform: scale(0.96); }
+.btn-primary { background: var(--accent); color: white; }
+.btn-primary:hover { background: #1d4ed8; }
+.btn-outline { background: white; border: 1px solid #e6e9ee; color: var(--accent); }
+.btn-outline:hover { background: #f3f4f6; }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.small { font-size: 0.875rem; color: var(--muted); }
+
+.question-meta { font-size: 0.8rem; color: var(--muted); text-transform:uppercase; letter-spacing:0.6px; margin-bottom:8px; }
+.question-title { font-size:1.125rem; margin-bottom: 12px; }
+
+.options { display:flex; flex-direction:column; gap:10px; margin-top:6px; }
+.option { 
+  display:flex; 
+  gap:10px; 
+  align-items:flex-start; 
+  padding:10px; 
+  border-radius:10px; 
+  border:1px solid #eef2f7; 
+  cursor:pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+.option:hover, .option:focus-within { background: #fbfdff; outline:none; }
+.option:active { transform: scale(0.98); }
+.option.selected { border-color: var(--accent); background: rgba(17,24,39,0.06); }
+.option .dot { height:18px; width:18px; border-radius:50%; border: 2px solid #cbd5e1; display:inline-block; margin-top:2px; transition: background 0.2s ease, border-color 0.2s ease; }
+.option.selected .dot { background: var(--accent); border-color: var(--accent); }
+
+.controls { display:flex; justify-content:space-between; align-items:center; margin-top:14px; gap:10px; flex-wrap:wrap; }
+.controls .left { display:flex; gap:8px; }
+
+.progress-bar { height:8px; width:100%; background: #e6e9ee; border-radius:8px; overflow:hidden; }
+.progress-bar > i { display:block; height:100%; background: var(--accent); width:0%; transition: width 300ms ease-in-out; }
+
+.timer { font-weight:700; }
+
+.results-row { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+.result-pill { padding:6px 10px; border-radius:999px; font-size:0.85rem; }
+
+.correct { background: #e6ffef; color: var(--success); border:1px solid rgba(22,163,74,0.12); }
+.wrong { background: #fff0f0; color: var(--danger); border:1px solid rgba(220,38,38,0.08); }
+
+.summary-list { display:flex; flex-direction:column; gap:12px; margin-top:12px; }
+
+.footer-note { text-align:center; color:var(--muted); font-size:0.85rem; margin-top:18px; }
+
+.link { color: var(--accent); text-decoration: none; }
+
+kbd { background:#111827; color:white; padding:2px 6px; border-radius:6px; font-size:0.75rem; }
+
+/* === Animations === */
+.fade-in { animation: fadeIn 0.4s ease-in-out; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.option.selected { 
+  border-color: var(--accent); 
+  background: rgba(17,24,39,0.06); 
+}
+.option.selected .dot { 
+  background: var(--accent); 
+  border-color: var(--accent); 
+}
